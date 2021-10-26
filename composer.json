@@ -1,0 +1,58 @@
+{
+    "name": "kangangga/utils",
+    "description": "",
+    "keywords": [
+        "kangangga",
+        "utils"
+    ],
+    "homepage": "https://github.com/kangangga/utils",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Angga Saputra",
+            "email": "masangga.com@gmail.com",
+            "homepage": "https://github.com/kangangga"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kangangga\\Core\\": "core",
+            "Kangangga\\Utils\\": "src"
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kangangga\\Utils\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kangangga\\Utils\\UtilsServiceProvider"
+            ],
+            "aliases": {
+                "Utils": "Kangangga\\Utils\\UtilsFacade"
+            }
+        }
+    }
+}
