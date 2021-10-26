@@ -17,7 +17,7 @@ composer require kangangga/utils
 ## Usage
 
 ```php
-// Usage description here
+ \Kanangga\Utils::call();
 ```
 
 ### Testing
